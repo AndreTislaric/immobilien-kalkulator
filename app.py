@@ -153,7 +153,7 @@ header {visibility: hidden;}
     font-weight: 400;
 }
 
-/* Tabs – Apple segmented control style */
+/* Tabs – Apple style */
 .stTabs [data-baseweb="tab-list"] {
     gap: 4px;
     background: #F5F5F7;
@@ -169,7 +169,7 @@ header {visibility: hidden;}
     font-size: 14px;
     color: #86868B;
     background: transparent;
-    border-bottom: none !important;
+    border-bottom: 3px solid transparent !important;
 }
 
 .stTabs [data-baseweb="tab"]:hover {
@@ -182,25 +182,17 @@ header {visibility: hidden;}
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     color: #007AFF !important;
     font-weight: 600;
-    border-bottom: none !important;
+    border-bottom: 3px solid #007AFF !important;
 }
 
-/* Remove the blue underline indicator */
+/* Hide the default sliding highlight bar */
 .stTabs [data-baseweb="tab-highlight"] {
     display: none !important;
 }
 
+/* Hide the full-width bottom border line (avoids double-line at box bottom) */
 .stTabs [data-baseweb="tab-border"] {
     display: none !important;
-}
-
-/* Also hide any bottom border on the tab bar */
-.stTabs [data-baseweb="tab-list"]::after {
-    display: none !important;
-}
-
-.stTabs [role="tablist"] {
-    border-bottom: none !important;
 }
 
 /* Inputs */
