@@ -153,9 +153,9 @@ header {visibility: hidden;}
     font-weight: 400;
 }
 
-/* Tabs */
+/* Tabs – Apple segmented control style */
 .stTabs [data-baseweb="tab-list"] {
-    gap: 0px;
+    gap: 4px;
     background: #F5F5F7;
     border-radius: 12px;
     padding: 4px;
@@ -167,11 +167,40 @@ header {visibility: hidden;}
     padding: 8px 20px;
     font-weight: 500;
     font-size: 14px;
+    color: #86868B;
+    background: transparent;
+    border-bottom: none !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: #1D1D1F;
+    background: rgba(0,0,0,0.03);
 }
 
 .stTabs [aria-selected="true"] {
     background: #FFFFFF !important;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    color: #007AFF !important;
+    font-weight: 600;
+    border-bottom: none !important;
+}
+
+/* Remove the blue underline indicator */
+.stTabs [data-baseweb="tab-highlight"] {
+    display: none !important;
+}
+
+.stTabs [data-baseweb="tab-border"] {
+    display: none !important;
+}
+
+/* Also hide any bottom border on the tab bar */
+.stTabs [data-baseweb="tab-list"]::after {
+    display: none !important;
+}
+
+.stTabs [role="tablist"] {
+    border-bottom: none !important;
 }
 
 /* Inputs */
